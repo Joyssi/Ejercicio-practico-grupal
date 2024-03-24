@@ -2,10 +2,297 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Horimiya</title>
+
+    <!--CDN de Bootstrap y Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+    crossorigin="anonymous">
+
+    <!-- Archivo .CSS-->
+    <link rel="stylesheet" href="./styles.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 </head>
+
 <body>
-    
+
+<div class="container-1">
+    <header class="d-flex flex-wrap justify-content-center 
+    py-3 mb-4 border-bottom">
+        <a href="#" class="d-flex align-items-center mb-3 
+        mb-md-0 me-md-auto text-dark text-decoration-none">
+        <!--Encabezado-->
+            <span class="fs-4">Horimiya</span>
+        </a>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a href="https://www.facebook.com/profile.php?id=100067549332444&mibextid=ZbWKwL"
+                class="nav-link">
+                    Facebook
+                    <i class="bi-facebook">
+                    </i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="https://www.instagram.com/farmaciaglorys/"
+                class="nav-link active">
+                    Instagram
+                    <i class="bi-instagram">
+                    </i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="https://www.instagram.com/farmaciaglorys/"
+                class="nav-link">
+                    WhatsApp
+                    <i class="bi-whatsapp">
+                    </i>
+                </a>
+            </li>
+        </ul>
+    </header>
+</div>
+
+<div class="px-4 text-center">
+    <div class="container">
+        <main>
+            <!--Encabezado del formulario-->
+            <h4 class="mb-3 mt-2">Encuesta sobre el anime Horimiya</h4>
+            <!--Envío de los datos al correo mediante la librería formSubmit-->
+            <form action="https://formsubmit.co/joyssicruz5@gmail.com" 
+            method="POST" 
+            class="needs-validation" 
+            novalidate
+            enctype="multipart/form-data">
+                <div class="row g-3">
+                    <!--Campos de datos personales-->
+                    <div class="col-lg-6">
+                        <label for="nombre" class="form-label">Nombre:</label>
+                        <input name="nombre" type="text" class="form-control" id="nombre"
+                               placeholder="Ingrese su nombre completo" required />
+                        <div class="valid-feedback">
+                            ¡Correcto! 😉
+                        </div>
+                        <div class="invalid-feedback">
+                            Debe ingresar su nombre 🙄.
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <label for="correo" class="form-label">Correo:</label>
+                        <input name="correo" type="email" class="form-control" id="correo" required />
+                        <div class="valid-feedback">
+                            ¡Correcto! 😉.
+                        </div>
+                        <div class="invalid-feedback">
+                            Debe ingresar su correo 🙄.
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <label for="descripcion" class="form-label">¿Cuál es tu opinión general sobre el anime Horimiya?:</label>
+                        <textarea name="descripcion" id="descripcion" cols="30" rows="4" required
+                        placeholder="Escriba aquí" class="form-control"></textarea>
+                        <div class="valid-feedback">
+                            ¡Correcto! 😉
+                        </div>
+                        <div class="invalid-feedback">
+                            Debe escribir aquí 😑.
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <label for="precioU" class="form-label">Precio Unitario:</label>
+                        <input name="precioU" type="number" class="form-control" id="precioU" 
+                        min="1" max="10000" required />
+                        <div class="valid-feedback">
+                            ¡Correcto! 😉
+                        </div>
+                        <div class="invalid-feedback">
+                            Debe ingresar un precio 😑.
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <label for="precio" class="form-label">Precio:</label>
+                        <input name="precio" type="number" class="form-control" id="precio" 
+                        min="1" max="1000" required />
+                        <div class="valid-feedback">
+                            ¡Correcto! 😉
+                        </div>
+                        <div class="invalid-feedback">
+                            Debe ingresar un precio 😑.
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <label for="stock" class="form-label">Cantidad en almacén:</label>
+                        <input name="stock" type="number" class="form-control" id="stock" 
+                        min="1" max="1000" required />
+                        <div class="valid-feedback">
+                            ¡Correcto! 😉
+                        </div>
+                        <div class="invalid-feedback">
+                            Debe ingresar una cantidad 😑.
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <label for="categoria" class="form-label">Categoría:</label>
+                        <select class="form-select" name="categoria" id="categoria" required>
+                            <option selected disabled value="">Selecciona</option>
+                            <option>Fitofármaco</option>
+                            <option>Bilógico</option>
+                        </select>
+                        <div class="valid-feedback">
+                            ¡Correcto! 😉
+                        </div>
+                        <div class="invalid-feedback">
+                            Debe seleccionar una opción 😑.
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <label for="marca" class="form-label">Marca:</label>
+                        <select class="form-select" name="marca" id="marca" required>
+                            <option selected disabled value="">Selecciona</option>
+                            <option>RAMOS</option>
+                            <option>PASHA S.A</option>
+                            <option>NORDIC</option>
+                        </select>
+                        <div class="valid-feedback">
+                            ¡Correcto! 😉
+                        </div>
+                        <div class="invalid-feedback">
+                            Debe seleccionar una opción 😑.
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <label for="presentacion" class="form-label">Presentación:</label>
+                        <select class="form-select" name="presentacion" id="presentacion" required>
+                            <option selected disabled value="">Selecciona</option>
+                            <option>Tableta</option>
+                            <option>Jarabe</option>
+                            <option>Solución Ótica</option>
+                            <option>Crema</option>
+                        </select>
+                        <div class="valid-feedback">
+                            ¡Correcto! 😉
+                        </div>
+                        <div class="invalid-feedback">
+                            Debe seleccionar una opción 😑.
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-4">
+                <button type="submit" class="btn btn-primary btn-lg" onclick="RegistrarMedicamento()">
+                    REGISTRAR 
+                </button>
+                <hr class="my-4">
+            </form>
+        </main>
+    </div>
+</div>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js">  
+    </script>
+
+    <script>
+    (() => {
+                'use strict';
+                const forms = document.querySelectorAll('.needs-validation');
+
+                Array.from(forms).forEach(form => {
+                    form.addEventListener('submit', event => {
+                        if (!form.checkValidity()) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            })();
+    </script>
+
+<script>
+
+    function RegistrarMedicamento() {
+        // Obtener los valores ingresados en los campos del formulario de registro
+        const nombre = document.getElementById('nombre').value.trim();
+        const descripcion= document.getElementById('descripcion').value.trim();
+        const fecha = document.getElementById('fecha').value.trim();
+        const precioU = document.getElementById('precioU').value.trim();
+        const precio = document.getElementById('precio').value.trim();
+        const stock = document.getElementById('stock').value.trim();
+        const categoria = document.getElementById('categoria').value.trim();
+        const marca = document.getElementById('marca').value.trim();
+        const presentacion = document.getElementById('presentacion').value.trim();
+
+        // Verificar que los campos estén llenos antes de crear el archivo .pdf
+        if (nombre === '' || descripcion === ''||fecha === '' ||
+        precioU === '' || precio === '' || stock === '') {
+        
+            return;
+        }
+
+        const doc = new jsPDF();
+        doc.setFillColor(28, 41, 51);
+        doc.rect(0, 0, 220, 60, 'f');
+        doc.setFontSize(14);
+        doc.setFontType("bold");
+        doc.text(`Farmacia Glorys`, 12, 50);
+        // Añadir los datos al archivo .pdf
+        const content = `
+            Nombre del medicamento: ${nombre}
+            Descripción: ${descripcion}
+            Fecha de vencimiento: ${fecha}
+            Precio Unitario: ${precioU} C$
+            Precio: ${precio} C$
+            Cantidad en almacén: ${stock} Unidades
+            Categoría: ${categoria}
+            Marca: ${marca}
+            Presentación: ${presentacion}
+        `;
+        doc.setFontSize(12);
+        doc.text(content, 20, 70);
+
+        const docpdf = `FarmaciaGlorys.pdf`;
+        doc.save(docpdf);
+    }
+
+    </script>
+
+<footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5>Información</h5>
+                <p>
+                    "No vivas con falsedades ni miedos, porque terminarás odiándote a ti mismo."
+                </p>
+            </div>
+            <div class="col l3 s12">
+                <h5 class="white-tezt">Contacto</h5>
+                <ul>
+                <li><a class="cr" href="#!">Teléfono</a></li>
+                <li><a class="cr" href="#!">Correo</a></li>
+                <li><a class="cr" href="#!">Dirección</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            Diseñado por <a class="cr" href="https://www.facebook.com/profile.php?id=100019002143312&mibextid=ZbWKwL">Joy Cruz Alias COCHI</a>
+        </div>
+    </div>
+</footer>
+
+
+
+
 </body>
 </html>
