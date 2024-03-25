@@ -84,7 +84,8 @@
             enctype="multipart/form-data">
                 <div class="row g-3">
                     <!--Campos de datos personales-->
-                    <div class="col-lg-6">
+                    <h5>Datos Personales:</h5>
+                    <div class="col-lg-4">
                         <label for="nombre" class="form-label">Nombre:</label>
                         <input name="nombre" type="text" class="form-control" id="nombre"
                             placeholder="Ingrese su nombre completo" required />
@@ -95,9 +96,10 @@
                             Debe ingresar su nombre 🙄.
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-4">
                         <label for="correo" class="form-label">Correo:</label>
-                        <input name="correo" type="email" class="form-control" id="correo" required />
+                        <input name="correo" type="email" class="form-control" 
+                        id="correo" required placeholder="correo@gmail.com" />
                         <div class="valid-feedback">
                             ¡Correcto! 😉.
                         </div>
@@ -105,15 +107,45 @@
                             Debes ingresar su correo 🙄.
                         </div>
                     </div>
+                    <div class="col-lg-4">
+                        <label for="genero" class="form-label">Género:</label>
+                        <select class="form-select" name="genero" id="genero" required>
+                            <option selected disabled value="">Selecciona</option>
+                            <option>Femenino</option>
+                            <option>Masculino</option>
+                        </select>
+                        <div class="valid-feedback">
+                            ¡Correcto! 😉
+                        </div>
+                        <div class="invalid-feedback">
+                            Debe seleccionar una opción 🙄.
+                        </div>
+                    </div>
+                    <hr class="my-4">
+                    <h5>Campos de la encuesta:</h5>
+                    <!-- Campos de la encuesta-->
                     <div class="col-lg-12">
-                        <label for="descripcion" class="form-label">¿Cuál es tu opinión general sobre el anime Horimiya?:</label>
+                        <label for="descripcion" class="form-label">¿Cuál es tu opinión 
+                            general sobre el anime Horimiya?</label>
                         <textarea name="descripcion" id="descripcion" cols="30" rows="4" required
                         placeholder="Escriba aquí" class="form-control"></textarea>
                         <div class="valid-feedback">
                             ¡Correcto! 😉
                         </div>
                         <div class="invalid-feedback">
-                            Debes escribir aquí 😑.
+                            Debes escribir aquí 🙄.
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <label for="nivel" class="form-label">Calificación (1 a 5): 
+                            <span id="nivel">3</span></label>
+                        <input name="nivel" type="range" class="form-range" id="nivel" 
+                        min="1" max="5" value="3" oninput="document.getElementById('nivelValor').textContent = this.value">
+                        <div class="valid-feedback">    
+                            ¡Correcto! 😉
+                        </div>
+                        <div class="invalid-feedback">
+                            Debes especificar un nivel 🙄.
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -147,20 +179,6 @@
                         </div>
                         <div class="invalid-feedback">
                             Debe ingresar una cantidad 😑.
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <label for="categoria" class="form-label">Categoría:</label>
-                        <select class="form-select" name="categoria" id="categoria" required>
-                            <option selected disabled value="">Selecciona</option>
-                            <option>Fitofármaco</option>
-                            <option>Bilógico</option>
-                        </select>
-                        <div class="valid-feedback">
-                            ¡Correcto! 😉
-                        </div>
-                        <div class="invalid-feedback">
-                            Debe seleccionar una opción 😑.
                         </div>
                     </div>
                     <div class="col-lg-4">
