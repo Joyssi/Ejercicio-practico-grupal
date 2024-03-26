@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 </head>
 
-<body>
+<body class="img-fluid">
 
 <div class="container-1">
     <header class="d-flex flex-wrap justify-content-center 
@@ -29,7 +29,7 @@
         <a href="#" class="d-flex align-items-center mb-3 
         mb-md-0 me-md-auto text-dark text-decoration-none">
         <!--Encabezado-->
-            <span class="fs-4 text-white">Horimiya</span>
+            <span class="fs-4 text-black">Horimiya</span>
         </a>
         <ul class="nav nav-pills">
             <li class="nav-item">
@@ -74,18 +74,18 @@
     </header>
 </div>
 
-<div class="px-4 text-center">
+<div class="px-4 text-center fondo">
     <div class="container">
         <main>
             <!--Encabezado del formulario-->
-            <h4 class="mb-3 mt-2 text-white">Encuesta sobre el anime Horimiya</h4>
+            <h4 class="mb-3 mt-2 text-black">Encuesta sobre el anime Horimiya</h4>
             <!--Envío de los datos al correo mediante la librería formSubmit-->
-            <form action="https://formsubmit.co/joyssicruz5@gmail.com" 
+            <form action="https://formsubmit.co/samsamtech0524@gmail.com" 
             method="POST" 
             class="needs-validation" 
             novalidate
             enctype="multipart/form-data">
-                <div class="row g-3 text-white">
+                <div class="row g-3 text-black">
                     <!--Campos de datos personales-->
                     <h5>Datos Personales:</h5>
                     <div class="col-lg-4">
@@ -100,7 +100,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <label for="correo" class="form-label text-white">Correo:</label>
+                        <label for="correo" class="form-label text-black">Correo:</label>
                         <input name="correo" type="email" class="form-control" 
                         id="correo" required placeholder="correo@gmail.com" />
                         <div class="valid-feedback">
@@ -111,7 +111,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <label for="genero" class="form-label text-white">Género:</label>
+                        <label for="genero" class="form-label text-black">Género:</label>
                         <select class="form-select" name="genero" id="genero" required>
                             <option selected disabled value="">Selecciona</option>
                             <option>Femenino</option>
@@ -128,7 +128,7 @@
                     <h5>Campos de la encuesta:</h5>
                     <!-- Campos de la encuesta-->
                     <div class="col-lg-12">
-                        <label for="descripcion" class="form-label containercr7">Cuál es tu opinión 
+                        <label for="descripcion" class="form-label containerx">Cuál es tu opinión 
                             general sobre el anime Horimiya</label>
                         <textarea name="descripcion" id="descripcion" cols="30" rows="4" required
                         placeholder="Escriba aquí" class="form-control"></textarea>
@@ -140,7 +140,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <label for="nivel" class="form-label">Calificación (1 a 5): 
+                        <label for="nivel" class="form-label">Calificación del Anime (1 a 5): 
                             <span id="nivel">3</span></label>
                         <input name="nivel" type="range" class="form-range" id="nivel" 
                         min="1" max="5" value="3" oninput="document.getElementById('nivelValor').textContent = this.value">
@@ -152,45 +152,71 @@
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <label for="precioU" class="form-label">Precio Unitario:</label>
-                        <input name="precioU" type="number" class="form-control" id="precioU" 
-                        min="1" max="10000" required />
+                        <label for="exampleDataList" class="form-label">Departamento</label>
+                           <input class="form-control" name="depart" list="datalistOptions" id="depart" placeholder="Departamento">
+                         <datalist id="datalistOptions">
+                           <option value="Chontales">
+                           <option value="Managua">
+                           <option value="Esteli">
+                           <option value="Rivas">
+                           <option value="Granada">
+                           <option value="Boaco">
+                           <option value="Carazo">
+                           <option value="Chinandega">
+                           <option value="Jinotega">
+                           <option value="León">
+                           <option value="Río San Juan">
+                           <option value="Madriz">
+                           <option value="Masaya">
+                           <option value="Matagalpa">
+                           <option value="Nueva Segovia">
+                        </datalist>
                         <div class="valid-feedback">
                             ¡Correcto! 😉
                         </div>
                         <div class="invalid-feedback">
-                            Debe ingresar un precio 😑.
+                            Debe seleccionar un Departamento 😑.
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <label for="precio" class="form-label">Precio:</label>
-                        <input name="precio" type="number" class="form-control" id="precio" 
-                        min="1" max="1000" required />
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="checkani">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Ver anime solo
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <label class="form-check-label" for="checkani">
+                            <input class="form-check-input" name="checkani" type="checkbox" value="" id="checkani" checked>
+                            <label class="form-check-label" for="flexCheckChecked">
+                              Ver anime con compañia
+                            </label>
+                          </div>
                         <div class="valid-feedback">
                             ¡Correcto! 😉
                         </div>
                         <div class="invalid-feedback">
-                            Debe ingresar un precio 😑.
+                            Debe seleccionar uno 😑.
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <label for="stock" class="form-label">Cantidad en almacén:</label>
-                        <input name="stock" type="number" class="form-control" id="stock" 
-                        min="1" max="1000" required />
+                        <label for="nombre" class="form-label">Comentario a mejorar la encuesta:</label>
+                    <input name="mejorEN" type="text" class="form-control" id="mejorEN"
+                        placeholder="Opinion" required />
                         <div class="valid-feedback">
                             ¡Correcto! 😉
                         </div>
                         <div class="invalid-feedback">
-                            Debe ingresar una cantidad 😑.
+                            Debe ingresar una comenario 😑.
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <label for="marca" class="form-label">Marca:</label>
+                        <label for="marca" class="form-label">Que tal le parese la encuesta:</label>
                         <select class="form-select" name="marca" id="marca" required>
                             <option selected disabled value="">Selecciona</option>
-                            <option>RAMOS</option>
-                            <option>PASHA S.A</option>
-                            <option>NORDIC</option>
+                            <option>Aburrida</option>
+                            <option>Neutral</option>
+                            <option>Interesante</option>
                         </select>
                         <div class="valid-feedback">
                             ¡Correcto! 😉
@@ -200,13 +226,13 @@
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <label for="presentacion" class="form-label">Presentación:</label>
-                        <select class="form-select" name="presentacion" id="presentacion" required>
+                        <label for="presentacion" class="form-label">Cual casa de animacion prefieres:</label>
+                        <select class="form-select" name="presentacionan" id="presentacionan" required>
                             <option selected disabled value="">Selecciona</option>
-                            <option>Tableta</option>
-                            <option>Jarabe</option>
-                            <option>Solución Ótica</option>
-                            <option>Crema</option>
+                            <option>Studio Ghibli</option>
+                            <option>MAPPA</option>
+                            <option>Ufotable</option>
+                            <option>Trigger studio</option>
                         </select>
                         <div class="valid-feedback">
                             ¡Correcto! 😉
@@ -262,7 +288,7 @@
 
                 <div class="col-lg-8">
                     <label for="nombre" class="form-label">anime favorito:</label>
-                    <input name="anime" type="text" class="form-control" id="anime"
+                    <input name="animef" type="text" class="form-control" id="animef"
                         placeholder="Anime Favorito" required />
                     <div class="valid-feedback">
                         ¡Correcto! 😉
@@ -284,8 +310,10 @@
                     </div>
                 </div>
 
-                <div class="col-lg-12">
-                    <label for="Pregunta" class="form-label text-white">¿Qué opinas de las diferencias entre el anime y el manga?</label>
+                <hr class="my-4">
+
+                <div class="col-lg-7">
+                    <label for="Pregunta" class="form-label text-black">¿Qué opinas de las diferencias entre el anime y el manga?</label>
                     <input name="Opinion" type="text " class="form-control" 
                     id="Opinion" required placeholder="Opinión" />
                     <div class="valid-feedback">
@@ -296,7 +324,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-12">
+                <div class="col-lg-5">
                     <label for="satisfaccion" class="form-label">Del 1 al 5 con que tanto te gusta el OP 1:
                         <span id="satisfaccion"></span></label>
                     <input name="nivelsa" type="range" class="form-range" id="nivelsa" 
@@ -329,7 +357,7 @@
                         <option>"Shiawase" </option>
                         
                     </select>
-                ></div>
+                </div>
 
                 <div class="col-lg-12">
                     <label for="hate" class="form-label container">Si tuvieras la oportunidad de cambiar
@@ -346,10 +374,10 @@
 
                 <hr class="my-4">
 
-                <button type="submit" class="btn btn-primary btn-lg" onclick="RegistrarMedicamento()">
+                <button type="submit" class="btn btn-primary btn-lg" onclick="RegistrarEncuesta()">
                 REGISTRAR 
                 </button>   
-                <hr class="my-4">
+                <hr class="my-4 hd">
 
 
             </form>
@@ -385,7 +413,7 @@
 
 <script>
 
-    function RegistrarMedicamento() {
+    function RegistrarEncuesta() {
         // Obtener los valores ingresados en los campos del formulario de registro
         const nombre = document.getElementById('nombre').value.trim();
         const descripcion= document.getElementById('descripcion').value.trim();
@@ -432,15 +460,15 @@
     </script>
 
 <footer class="page-footer">
-    <div class="container containercr">
+    <div class="container">
         <div class="row">
-            <div class="col l6 s12 text-white">
+            <div class="col l6 s12 text-black">
                 <h5>Información</h5>
                 <p>
                     "No vivas con falsedades ni miedos, porque terminarás odiándote a ti mismo."
                 </p>
             </div>
-            <div class="col l3 s12 text-white">
+            <div class="col l3 s12 text-black">
                 <h5 class="white-tezt">Contacto</h5>
                 <ul>
                 <li><a class="cr text-info" href="#!">Teléfono</a></li>
@@ -451,8 +479,8 @@
         </div>
     </div>
     <div class="footer-copyright">
-        <div class="container containercr text-info">
-            Diseñado por <a class="cr text-white" href="https://www.facebook.com/profile.php?id=100019002143312&mibextid=ZbWKwL">SamSamTech/a>
+        <div class="container containercr text-black">
+            Diseñado por <a class="cr text-info" href="https://www.facebook.com/profile.php?id=100019002143312&mibextid=ZbWKwL">SamSamTech/a>
         </div>
     </div>
 </footer>

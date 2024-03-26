@@ -1,15 +1,13 @@
-body {
-    background-image: url('Default_backgrou.jpg');
-    background-size: 100% 100%;
-      background-position: center;
-      height: 100vh; /* Ajusta la altura según lo necesites */
+    .container-1{
+      background-image: url('fondo.jpg_large'); 
     }
 
-    .containercr{
-        background-color: darkslateblue;
-        border-radius: 10px;
+    .fondo{
+        background-image: url(Horimiya.jpg);
+        background-position: center;
+        background-attachment: fixed
     }
-    .containercr7{
-        background-color: rgb(104, 102, 121);
-        border-radius: 10px;
+
+    .page-footer{
+        background-image: url(fondo.jpg_large);
     }
