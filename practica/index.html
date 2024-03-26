@@ -57,7 +57,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="https://www.instagram.com/farmaciaglorys/"
+                <a href="https://horimiya.fandom.com/wiki/Horimiya_Wiki/"
                 class="nav-link">
                     Resumen
                     </i>
@@ -284,12 +284,74 @@
                     </div>
                 </div>
 
+                <div class="col-lg-12">
+                    <label for="Pregunta" class="form-label text-white">¿Qué opinas de las diferencias entre el anime y el manga?</label>
+                    <input name="Opinion" type="text " class="form-control" 
+                    id="Opinion" required placeholder="Opinión" />
+                    <div class="valid-feedback">
+                        ¡Correcto! 😉.
+                    </div>
+                    <div class="invalid-feedback">
+                        Debes ingresar su respuesta 🙄.>
+                    </div>
                 </div>
+
+                <div class="col-lg-12">
+                    <label for="satisfaccion" class="form-label">Del 1 al 5 con que tanto te gusta el OP 1:
+                        <span id="satisfaccion"></span></label>
+                    <input name="nivelsa" type="range" class="form-range" id="nivelsa" 
+                    min="1" max="5" value= "5" oninput="document.getElementById('nivelValor').textContent = this.value">
+                    <div class="valid-feedback">    
+                        ¡Correcto! 😉
+                    </div>
+                    <div class="invalid-feedback">
+                        Debes especificar un nivel 🙄.>
+                        </div>
+                    </div>
+
+                <div class="col-lg-6">
+                    <label for="aprec" class="form-label">Cuanto aprecio le tienes</label>
+                    <input name="aprec" type="number" class="form-control" id="aprec" 
+                    min="1" max="1000" required />
+                    <div class="valid-feedback">
+                        ¡Correcto! 😉
+                    </div>
+                    <div class="invalid-feedback">
+                        Debes ingresar lo importante que es para tí😑.
+                ></div>
+            </div>
+
+                <div class="col-lg-6">
+                    <label for="" class="form-label">OP favorito:</label>
+                    <select class="form-select" name="op" id="op" required>
+                        <option selected disabled value="">Selecciona</option>
+                        <option>"Irokousui"</option>
+                        <option>"Shiawase" </option>
+                        
+                    </select>
+                ></div>
+
+                <div class="col-lg-12">
+                    <label for="hate" class="form-label container">Si tuvieras la oportunidad de cambiar
+                         algo del manga que sería</label>
+                    <textarea name="descripcion" id="descripcion" cols="30" rows="4" required placeholder="Escriba aquí" class="form-control"></textarea>
+                    <div class="valid-feedback">
+                        ¡Correcto! 😉
+                    </div>
+                    <div class="invalid-feedback">
+                        Debes escribir aquí 🙄.
+                ></div>
+            </div>
+        </div>
+
                 <hr class="my-4">
+
                 <button type="submit" class="btn btn-primary btn-lg" onclick="RegistrarMedicamento()">
-                    REGISTRAR 
-                </button>
+                REGISTRAR 
+                </button>   
                 <hr class="my-4">
+
+
             </form>
         </main>
     </div>
