@@ -29,43 +29,31 @@
         <a href="#" class="d-flex align-items-center mb-3 
         mb-md-0 me-md-auto text-dark text-decoration-none">
         <!--Encabezado-->
-            <span class="fs-4 text-black">Horimiya</span>
+            <span class="fs-4">Horimiya</span>
         </a>
         <ul class="nav nav-pills">
             <li class="nav-item">
-                <a href="https://www.facebook.com/profile.php?id=100067549332444&mibextid=ZbWKwL"
+                <a href="https://www3.animeflv.net/anime/horimiya"
                 class="nav-link">
-                    Facebook
-                    <i class="bi-facebook">
-                    </i>
+                    Anime
                 </a>
             </li>
             <li class="nav-item">
-                <a href="https://www.instagram.com/farmaciaglorys/"
-                class="nav-link active">
-                    Instagram
-                    <i class="bi-instagram">
-                    </i>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="https://www.instagram.com/farmaciaglorys/"
+                <a href="https://lectortmo.org/manga/horimiya"
                 class="nav-link">
-                    WhatsApp
-                    <i class="bi-whatsapp">
-                    </i>
+                    Manga
                 </a>
             </li>
             <li class="nav-item">
-                <a href="https://horimiya.fandom.com/wiki/Horimiya_Wiki/"
+                <a href="https://youtu.be/bO_8TpK_mHc?si=yh5VP3fuePIqvNL_"
                 class="nav-link">
                     Resumen
                     </i>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="https://www.instagram.com/farmaciaglorys/"
-                class="nav-link">
+                <a href="https://skdesu.com/es/anime/horimiya/"
+                class="nav-link active">
                     Ver más
                     </i>
                 </a>
@@ -78,14 +66,15 @@
     <div class="container">
         <main>
             <!--Encabezado del formulario-->
-            <h4 class="mb-3 mt-2 text-black">Encuesta sobre el anime Horimiya</h4>
+            <br> <!--Espacio de la barra de navegación con el formulario-->
+            <h4 class="mb-3 mt-2">Encuesta sobre el anime Horimiya</h4>
             <!--Envío de los datos al correo mediante la librería formSubmit-->
             <form action="https://formsubmit.co/samsamtech0524@gmail.com" 
             method="POST" 
             class="needs-validation" 
             novalidate
             enctype="multipart/form-data">
-                <div class="row g-3 text-black">
+                <div class="row g-3">
                     <!--Campos de datos personales-->
                     <h5>Datos Personales:</h5>
                     <div class="col-lg-4">
@@ -100,7 +89,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <label for="correo" class="form-label text-black">Correo:</label>
+                        <label for="correo" class="form-label">Correo:</label>
                         <input name="correo" type="email" class="form-control" 
                         id="correo" required placeholder="correo@gmail.com" />
                         <div class="valid-feedback">
@@ -111,7 +100,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <label for="genero" class="form-label text-black">Género:</label>
+                        <label for="genero" class="form-label">Género:</label>
                         <select class="form-select" name="genero" id="genero" required>
                             <option selected disabled value="">Selecciona</option>
                             <option>Femenino</option>
@@ -126,10 +115,20 @@
                     </div>
                     <hr class="my-4">
                     <h5>Campos de la encuesta:</h5>
-                    <!-- Campos de la encuesta-->
-                    <div class="col-lg-12">
-                        <label for="descripcion" class="form-label containerx">Cuál es tu opinión 
-                            general sobre el anime Horimiya</label>
+                    <!-- Campos de la encuesta...................................-->
+                    <div class="col-lg-4">
+                        <label for="anime" class="form-label">¿Has visto el anime "Horimiya"?</label>
+                        <input name="anime" type="text" class="form-control" id="anime" required />
+                        <div class="valid-feedback">
+                            ¡Correcto! 😉
+                        </div>
+                        <div class="invalid-feedback">
+                            Debes escribir aquí 🙄.
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <label for="descripcion" class="form-label containerx">¿Cuál es tu opinión 
+                            general sobre el anime "Horimiya"?</label>
                         <textarea name="descripcion" id="descripcion" cols="30" rows="4" required
                         placeholder="Escriba aquí" class="form-control"></textarea>
                         <div class="valid-feedback">
@@ -140,246 +139,141 @@
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <label for="nivel" class="form-label">Calificación del Anime (1 a 5): 
-                            <span id="nivel">3</span></label>
+                        <label for="nivel" class="form-label">En una escala del 1 al 5, ¿Qué tan 
+                            satisfecho/a estás con la historia de "Horimiya"?
+                            <span id="nivelV">3</span></label>
                         <input name="nivel" type="range" class="form-range" id="nivel" 
-                        min="1" max="5" value="3" oninput="document.getElementById('nivelValor').textContent = this.value">
-                        <div class="valid-feedback">    
-                            ¡Correcto! 😉
-                        </div>
-                        <div class="invalid-feedback">
-                            Debes especificar un nivel 🙄.
-                        </div>
+                        min="1" max="5" value="3" oninput="document.getElementById('nivelV').textContent = this.value">
                     </div>
                     <div class="col-lg-4">
-                        <label for="exampleDataList" class="form-label">Departamento</label>
-                           <input class="form-control" name="depart" list="datalistOptions" id="depart" placeholder="Departamento">
-                         <datalist id="datalistOptions">
-                           <option value="Chontales">
-                           <option value="Managua">
-                           <option value="Esteli">
-                           <option value="Rivas">
-                           <option value="Granada">
-                           <option value="Boaco">
-                           <option value="Carazo">
-                           <option value="Chinandega">
-                           <option value="Jinotega">
-                           <option value="León">
-                           <option value="Río San Juan">
-                           <option value="Madriz">
-                           <option value="Masaya">
-                           <option value="Matagalpa">
-                           <option value="Nueva Segovia">
+                        <label for="personaje" class="form-label">¿Cuál es tu personaje favorito en "Horimiya"?</label>
+                            <input class="form-control" name="personaje" list="datalistOptions" id="personaje" placeholder="Selecciona">
+                            <datalist id="datalistOptions">
+                            <option value="Hori Kyouko">
+                            <option value="Izumi Miyamura">
+                            <option value="Yuki Yoshikawa">
+                            <option value="Toru Ishikawa">
+                            <option value="Yanagi Akane">
+                            <option value="Sakura Kono">
+                            <option value="Iura Shuu">
+                            <option value="Ayasaki Remi">
+                            <option value="Sengoku Kakeru">
                         </datalist>
-                        <div class="valid-feedback">
-                            ¡Correcto! 😉
-                        </div>
-                        <div class="invalid-feedback">
-                            Debe seleccionar un Departamento 😑.
-                        </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="checkani">
-                            <label class="form-check-label" for="flexCheckDefault">
-                              Ver anime solo
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <label class="form-check-label" for="checkani">
-                            <input class="form-check-input" name="checkani" type="checkbox" value="" id="checkani" checked>
-                            <label class="form-check-label" for="flexCheckChecked">
-                              Ver anime con compañia
-                            </label>
-                          </div>
-                        <div class="valid-feedback">
-                            ¡Correcto! 😉
-                        </div>
-                        <div class="invalid-feedback">
-                            Debe seleccionar uno 😑.
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <label for="nombre" class="form-label">Comentario a mejorar la encuesta:</label>
-                    <input name="mejorEN" type="text" class="form-control" id="mejorEN"
-                        placeholder="Opinion" required />
-                        <div class="valid-feedback">
-                            ¡Correcto! 😉
-                        </div>
-                        <div class="invalid-feedback">
-                            Debe ingresar una comenario 😑.
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <label for="marca" class="form-label">Que tal le parese la encuesta:</label>
-                        <select class="form-select" name="marca" id="marca" required>
+                        <label for="aspectos" class="form-label">¿Qué aspectos de "Horimiya" te han gustado más?</label>
+                        <select class="form-select" name="aspectos" id="aspectos" required>
                             <option selected disabled value="">Selecciona</option>
-                            <option>Aburrida</option>
-                            <option>Neutral</option>
-                            <option>Interesante</option>
+                            <option>Desarrollo de personajes</option>
+                            <option>Relaciones interpersonales</option>
+                            <option>Comedia</option>
+                            <option>Romance</option>
+                            <option>Temas de la adolescencia</option>
                         </select>
                         <div class="valid-feedback">
                             ¡Correcto! 😉
                         </div>
                         <div class="invalid-feedback">
-                            Debe seleccionar una opción 😑.
+                            Debes seleccionar una opción 🙄.
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <label for="presentacion" class="form-label">Cual casa de animacion prefieres:</label>
-                        <select class="form-select" name="presentacionan" id="presentacionan" required>
+                        <label for="hora" class="form-label">Horas que ves anime al día:</label>
+                        <input name="hora" type="number" class="form-control" id="hora" 
+                        min="1" max="100" required />
+                        <div class="valid-feedback">
+                            ¡Correcto! 😉
+                        </div>
+                        <div class="invalid-feedback">
+                            Debes ingresar una cantidad promedio 🙄.
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <label for="check" class="form-label">¿Te gustaría que hubiera una
+                            segunda temporada del anime "Horimiya"?
+                        </label>
+                        <input name="check" type="text" class="form-control" id="check" required />
+                        <div class="valid-feedback">
+                            ¡Correcto! 😉
+                        </div>
+                        <div class="invalid-feedback">
+                            Debes escribir aquí 🙄.
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <label for="op" class="form-label">Opening favorito:</label>
+                        <select class="form-select" name="op" id="op" required>
                             <option selected disabled value="">Selecciona</option>
-                            <option>Studio Ghibli</option>
-                            <option>MAPPA</option>
-                            <option>Ufotable</option>
-                            <option>Trigger studio</option>
+                            <option>"Iro kousui"</option>
+                            <option>"Shiawase by Omoinotake" </option>
                         </select>
                         <div class="valid-feedback">
                             ¡Correcto! 😉
                         </div>
                         <div class="invalid-feedback">
-                            Debe seleccionar una opción 😑.
+                            Debes seleccionar una opción 🙄.
                         </div>
                     </div>
-
-                  <hr class="my-4">
-                  <div class="col-lg-4">
-                    <label for="marca" class="form-label">Personaje favorito:</label>
-                    <select class="form-select" name="pers" id="pers" required>
-                        <option selected disabled value="">Selecciona</option>
-                        <option>Miyamura</option>
-                        <option>Hori</option>
-                        <option>Sota</option>
-                        <option>Sengoku</option>
-                        <Option>Toru</Option>
-                    </select>
-                    <div class="valid-feedback">
-                        ¡Correcto! 😉
-                    </div>
-                    <div class="invalid-feedback">
-                        Debe seleccionar una opción 😑.
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4">
-                    <label for="nivel" class="form-label">del 1 al 5 con que frecuencia consumes anime:
-                        <span id="nivel"></span></label>
-                    <input name="nivelAn" type="range" class="form-range" id="nivelAnSS" 
-                    min="1" max="5" value="3" oninput="document.getElementById('nivelValor').textContent = this.value">
-                    <div class="valid-feedback">    
-                        ¡Correcto! 😉
-                    </div>
-                    <div class="invalid-feedback">
-                        Debes especificar un nivel 🙄.
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <label for="nombre" class="form-label">Manga favorito:</label>
-                    <input name="manga" type="text" class="form-control" id="manga"
-                        placeholder="Ingrese su Manga" required />
-                    <div class="valid-feedback">
-                        ¡Correcto! 😉
-                    </div>
-                    <div class="invalid-feedback">
-                        Debe ingresar su Manga 🙄.
-                    </div>
-                </div>
-
-                <div class="col-lg-8">
-                    <label for="nombre" class="form-label">anime favorito:</label>
-                    <input name="animef" type="text" class="form-control" id="animef"
-                        placeholder="Anime Favorito" required />
-                    <div class="valid-feedback">
-                        ¡Correcto! 😉
-                    </div>
-                    <div class="invalid-feedback">
-                        Debe ingresar su Manga 🙄.
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <label for="stock" class="form-label">Horas que ves anime al dia:</label>
-                    <input name="horas" type="number" class="form-control" id="horas" 
-                    min="1" max="1000" required />
-                    <div class="valid-feedback">
-                        ¡Correcto! 😉
-                    </div>
-                    <div class="invalid-feedback">
-                        Debe ingresar una hora promedio 😑.
-                    </div>
-                </div>
-
-                <hr class="my-4">
-
-                <div class="col-lg-7">
-                    <label for="Pregunta" class="form-label text-black">¿Qué opinas de las diferencias entre el anime y el manga?</label>
-                    <input name="Opinion" type="text " class="form-control" 
-                    id="Opinion" required placeholder="Opinión" />
-                    <div class="valid-feedback">
-                        ¡Correcto! 😉.
-                    </div>
-                    <div class="invalid-feedback">
-                        Debes ingresar su respuesta 🙄.>
-                    </div>
-                </div>
-
-                <div class="col-lg-5">
-                    <label for="satisfaccion" class="form-label">Del 1 al 5 con que tanto te gusta el OP 1:
-                        <span id="satisfaccion"></span></label>
-                    <input name="nivelsa" type="range" class="form-range" id="nivelsa" 
-                    min="1" max="5" value= "5" oninput="document.getElementById('nivelValor').textContent = this.value">
-                    <div class="valid-feedback">    
-                        ¡Correcto! 😉
-                    </div>
-                    <div class="invalid-feedback">
-                        Debes especificar un nivel 🙄.>
+                    <div class="col-lg-8">
+                        <label for="reco" class="form-label containerx">¿Recomendarías "Horimiya" a otras personas?
+                            Justifica</label>
+                        <textarea name="reco" id="reco" cols="30" rows="4" required
+                        placeholder="Escriba aquí" class="form-control"></textarea>
+                        <div class="valid-feedback">
+                            ¡Correcto! 😉
+                        </div>
+                        <div class="invalid-feedback">
+                            Debes escribir aquí 🙄.
                         </div>
                     </div>
-
-                <div class="col-lg-6">
-                    <label for="aprec" class="form-label">Cuanto aprecio le tienes</label>
-                    <input name="aprec" type="number" class="form-control" id="aprec" 
-                    min="1" max="1000" required />
-                    <div class="valid-feedback">
-                        ¡Correcto! 😉
+                    <div class="col-lg-4">
+                        <label for="checka" class="form-label">¿Crees que Horimiya ha logrado
+                            ser fiel al manga original?
+                        </label>
+                        <input name="checka" type="text" class="form-control" id="checka" required />
+                        <div class="valid-feedback">
+                            ¡Correcto! 😉
+                        </div>
+                        <div class="invalid-feedback">
+                            Debes escribir aquí 🙄.
+                        </div>
                     </div>
-                    <div class="invalid-feedback">
-                        Debes ingresar lo importante que es para tí😑.
-                ></div>
-            </div>
-
-                <div class="col-lg-6">
-                    <label for="" class="form-label">OP favorito:</label>
-                    <select class="form-select" name="op" id="op" required>
-                        <option selected disabled value="">Selecciona</option>
-                        <option>"Irokousui"</option>
-                        <option>"Shiawase" </option>
-                        
-                    </select>
-                </div>
-
+                    <div class="col-lg-8">
+                        <label for="opinion" class="form-label">¿Qué opinas de las diferencias 
+                            entre el anime y el manga?</label>
+                        <input name="opinion" type="text " class="form-control" 
+                        id="opinion" required placeholder="Escriba aquí" />
+                        <div class="valid-feedback">
+                            ¡Correcto! 😉.
+                        </div>
+                        <div class="invalid-feedback">
+                            Debes ingresar tu respuesta 🙄.
+                        </div>
+                    </div>
+                <div class="col-lg-4">
+                    <label for="nivels" class="form-label">Del 1 al 5 que tanto te gusta el opening Iro kousui:
+                        <span id="valorN">4</span></label>
+                    <input name="nivels" type="range" class="form-range" id="nivels" 
+                    min="1" max="5" value= "4" oninput="document.getElementById('valorN').textContent = this.value">
+                    </div>
                 <div class="col-lg-12">
                     <label for="hate" class="form-label container">Si tuvieras la oportunidad de cambiar
-                         algo del manga que sería</label>
-                    <textarea name="descripcion" id="descripcion" cols="30" rows="4" required placeholder="Escriba aquí" class="form-control"></textarea>
+                        algo del manga ¿Qué sería?</label>
+                    <textarea name="hate" id="hate" cols="30" rows="4" required placeholder="Escriba aquí" 
+                    class="form-control"></textarea>
                     <div class="valid-feedback">
                         ¡Correcto! 😉
                     </div>
                     <div class="invalid-feedback">
                         Debes escribir aquí 🙄.
-                ></div>
+                </div>
             </div>
         </div>
-
                 <hr class="my-4">
-
-                <button type="submit" class="btn btn-primary btn-lg" onclick="RegistrarEncuesta()">
-                REGISTRAR 
+                <button type="submit" class="btn btn-lg" onclick="RegistrarEncuesta()">
+                ENVIAR 
                 </button>   
                 <hr class="my-4 hd">
-
-
             </form>
         </main>
     </div>
@@ -416,47 +310,61 @@
     function RegistrarEncuesta() {
         // Obtener los valores ingresados en los campos del formulario de registro
         const nombre = document.getElementById('nombre').value.trim();
+        const correo = document.getElementById('correo').value.trim();
+        const genero = document.getElementById('genero').value.trim();
+        const anime = document.getElementById('anime').value.trim();
         const descripcion= document.getElementById('descripcion').value.trim();
-        const fecha = document.getElementById('fecha').value.trim();
-        const precioU = document.getElementById('precioU').value.trim();
-        const precio = document.getElementById('precio').value.trim();
-        const stock = document.getElementById('stock').value.trim();
-        const categoria = document.getElementById('categoria').value.trim();
-        const marca = document.getElementById('marca').value.trim();
-        const presentacion = document.getElementById('presentacion').value.trim();
+        const nivel = document.getElementById('nivel').value.trim();
+        const personaje = document.getElementById('personaje').value.trim();
+        const aspectos = document.getElementById('aspectos').value.trim();
+        const hora = document.getElementById('hora').value.trim();
+        const check = document.getElementById('check').value.trim();
+        const op = document.getElementById('op').value.trim();
+        const reco = document.getElementById('reco').value.trim();
+        const checka = document.getElementById('checka').value.trim();
+        const opinion = document.getElementById('opinion').value.trim();
+        const nivels = document.getElementById('nivels').value.trim();
+        const hate = document.getElementById('hate').value.trim();
 
         // Verificar que los campos estén llenos antes de crear el archivo .pdf
-        if (nombre === '' || descripcion === ''||fecha === '' ||
-        precioU === '' || precio === '' || stock === '') {
+        if (nombre === '' || descripcion === ''||correo === '' ||
+        hora === '' || opinion === '' || reco === '' || hate === '') {
         
             return;
         }
 
         const doc = new jsPDF();
-        doc.setFillColor(28, 41, 51);
+        doc.setFillColor(134, 21, 96);
         doc.rect(0, 0, 220, 60, 'f');
         doc.setFontSize(14);
+        doc.setFont("helvetica");
         doc.setFontType("bold");
-        doc.text(`Farmacia Glorys`, 12, 50);
+        doc.text(`Encuesta Horimiya`, 12, 50);
         // Añadir los datos al archivo .pdf
-        const content = `
-            Nombre del medicamento: ${nombre}
-            Descripción: ${descripcion}
-            Fecha de vencimiento: ${fecha}
-            Precio Unitario: ${precioU} C$
-            Precio: ${precio} C$
-            Cantidad en almacén: ${stock} Unidades
-            Categoría: ${categoria}
-            Marca: ${marca}
-            Presentación: ${presentacion}
+        const datos = `
+            1. Nombre Completo: ${nombre}
+            2. Correo: ${correo}
+            3. Género: ${genero}
+            4. ¿Has visto el anime "Horimiya"?: ${anime}
+            5. ¿Cuál es tú opinión general sobre el anime "Horimiya"?: ${descripcion}
+            6. En una escala del 1 al 5, ¿Qué tan satisfecho/a estás con la historia de "Horimiya"?: ${nivel}
+            7. ¿Cuál es tu personaje favorito en "Horimiya"?: ${personaje}
+            8. ¿Qué aspectos de "Horimiya" te han gustado más?: ${aspectos}
+            9. Horas que ves anime al día: ${hora}
+            10. ¿Te gustaría que hubiera una segunda temporada de "Horimiya"?: ${check}
+            11. Opening favorito: ${op}
+            12. ¿Recomendarías "Horimiya" a otras personas? Justifica: ${reco}
+            13. ¿Crees que "Horimiya" ha logrado ser fiel al manga original?: ${checka}
+            14. ¿Qué opinas de las diferencias entre el anime y el manga?: ${opinion}
+            15. Del 1 al 5 que tanto te gusta el opening Iro kousui: ${nivels}
+            16. Si tuvieras la oportunidad de cambiar algo del manga ¿Qué sería?: ${hate}
         `;
         doc.setFontSize(12);
-        doc.text(content, 20, 70);
+        doc.text(datos, 12, 50);
 
-        const docpdf = `FarmaciaGlorys.pdf`;
+        const docpdf = `Encuesta_Horimiya.pdf`;
         doc.save(docpdf);
     }
-
     </script>
 
 <footer class="page-footer">
@@ -464,23 +372,36 @@
         <div class="row">
             <div class="col l6 s12 text-black">
                 <h5>Información</h5>
-                <p>
-                    "No vivas con falsedades ni miedos, porque terminarás odiándote a ti mismo."
+                <p class="text">
+                    "Las emociones no se pueden medir, pero se pueden sentir 
+                    en cada palabra que decimos." "En este vasto mundo, encontré
+                        un lugar al lado de aquellos que amo." "No es la cantidad de
+                        tiempo que pasamos juntos, sino la calidad de esos momentos lo 
+                        que realmente importa." "Cada día es una nueva oportunidad para 
+                        aprender, amar y reír."
                 </p>
+            </div>
+            <div class="col l3 s12">
+                <h5 class="white-text">Menú</h5>
+                <ul>
+                    <li><a class="white-text" href="https://youtu.be/bO_8TpK_mHc?si=yh5VP3fuePIqvNL_">Resumen</a></li>
+                    <li><a class="white-text" href="https://www3.animeflv.net/anime/horimiya">Episodios</a></li>
+                    <li><a class="white-text" href="https://lectortmo.org/manga/horimiya">Manga</a></li>
+                </ul>
             </div>
             <div class="col l3 s12 text-black">
                 <h5 class="white-tezt">Contacto</h5>
                 <ul>
-                <li><a class="cr text-info" href="#!">Teléfono</a></li>
-                <li><a class="cr text-info" href="#!">Correo</a></li>
-                <li><a class="cr text-info" href="#!">Dirección</a></li>
+                <li><a class="white-text" href="#">Teléfono</a></li>
+                <li><a class="white-text" href="#">Correo</a></li>
+                <li><a class="white-text" href="#">Dirección</a></li>
                 </ul>
             </div>
         </div>
     </div>
     <div class="footer-copyright">
         <div class="container containercr text-black">
-            Diseñado por <a class="cr text-info" href="https://www.facebook.com/profile.php?id=100019002143312&mibextid=ZbWKwL">SamSamTech/a>
+            Diseñado por <a class="cr text-info" href="#">SamSamTech/a>
         </div>
     </div>
 </footer>
